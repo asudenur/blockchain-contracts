@@ -41,17 +41,19 @@ git clone <https://github.com/asudenur/blockchain-contracts>
 cd <blockchain-contracts>
 Docker Compose ile ortamı başlat:
 docker compose up -d
-Hardhat içinde kontrat derleme ve deploy:
+<img width="1473" height="264" alt="Ekran görüntüsü 2025-11-26 160212" src="https://github.com/user-attachments/assets/722fbe80-eed9-4f3f-889d-97e172069d74" />
 
+Hardhat içinde kontrat derleme ve deploy:
 docker compose exec hardhat bash
 npx hardhat compile
 npx hardhat run scripts/deploy.js --network localhost
-
+<img width="959" height="127" alt="Ekran görüntüsü 2025-11-26 160432" src="https://github.com/user-attachments/assets/9be8156d-8607-4ff0-8694-f9c03d4310e7" />
 
 Çıktıda kontrat adresini not edin ve client/index.js içindeki REGISTRY_ADDRESS değişkenine yazın.
 Client üzerinden sertifika oluşturma ve doğrulama:
 docker compose exec client bash
 node index.js
+<img width="799" height="63" alt="Ekran görüntüsü 2025-11-26 160549" src="https://github.com/user-attachments/assets/1c8f9fb6-e0bf-4482-909c-0d03fe83c78c" />
 
 6. Akıllı Kontrat Özeti
 
@@ -79,6 +81,8 @@ onlyOwner modifier ile yalnızca yetkili ihraççı işlem yapabilir
   "salt": "rastgele-üretilecek"
 }
 Salt istemci tarafında üretilir, zincire yazılmaz.
+<img width="1000" height="342" alt="Ekran görüntüsü 2025-11-26 160625" src="https://github.com/user-attachments/assets/4f075d81-cccd-4cb1-a207-1b47566e46f7" />
+
 
 8. Kullanım Örnekleri
 Sertifika oluşturma (issue)
