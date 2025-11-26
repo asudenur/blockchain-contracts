@@ -1,0 +1,10 @@
+{
+  "name": "client",
+  "version": "1.0.0",
+  "dependencies": {
+    "ethers": "^6.0.0"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
+}
